@@ -2,7 +2,8 @@ import numpy as np
 
 U = np.array([[1, 2, 3],
               [0, 4, 5],
-              [0, 0, 6]])
+              [0, 0, 6]
+              ])
 # print(U)
 
 det_U = np.linalg.det(U) # Compute determinant of matrix
@@ -31,7 +32,8 @@ for i in range(n, 0, -1):
 
 B = np.array([[1],
               [2],
-              [3]])
+              [3]
+              ])
 
 X = np.zeros((n, B.shape[1]))
 
