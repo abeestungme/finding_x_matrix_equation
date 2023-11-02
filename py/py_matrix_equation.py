@@ -8,7 +8,7 @@ U = np.array([[1, 2, 3],
 
 det_U = np.linalg.det(U) # Compute determinant of matrix
 if det_U == 0:
-     print('Determinant of U = 1. Cannot compute inverse matrix.')
+     print('Determinant of U = 0. Cannot compute inverse matrix.')
      exit()
 
 n = U.shape[0] 
