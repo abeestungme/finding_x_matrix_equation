@@ -1,6 +1,6 @@
 #a = matrix(data = c(1,2,4,0,3,5,0,0,6), nrow = 3, ncol = 3)
 
-U = matrix(data = c(1,0,0,2,3,0,4,5,6), nrow = 3, ncol = 3)
+U = matrix(data = c(1,0,0,2,4,0,3,5,6), nrow = 3, ncol = 3)
 
 n = nrow(U)
 
