@@ -1,15 +1,34 @@
+# MATEUSZ PINDYK & KRZYSZTOF RAKOCZY
+# Znalezc macierz X wymiaru nxm spelniajaca rownanie U*X=B
+# Sposob rozwiazania: X = U^(-1) * B
+
 import numpy as np
+
+################################################
+#   It is possible to generate random matrix of specified size below or input own matrix
+
+
+#   Specify the size of the matrix
+# no = 100  # Change this to the desired size
+
+#   Generate a random upper triangular matrix with values between 1 and 10
+# U = np.random.randint(1, 15, size=(no, no))
+# U = np.triu(U)
+
+#   Input your own matrix below
 
 U = np.array([[1, 2, 3],
               [0, 4, 5],
               [0, 0, 6]
               ])
-# print(U)
 
-det_U = np.linalg.det(U) # Compute determinant of matrix
-if det_U == 0:
-     print('Determinant of U = 0. Cannot compute inverse matrix.')
-     exit()
+################################################
+#   It is possible to compute inverse matrix only if determinant of it exists. You can check it by computing it with the code below.
+
+# det_U = np.linalg.det(U) # Compute determinant of matrix
+# if det_U == 0:
+#      print('Determinant of U = 0. Cannot compute inverse matrix.')
+#      exit()
 
 n = U.shape[0] 
 
@@ -27,9 +46,12 @@ for i in range(n, 0, -1):
                 s += U[i - 1, k] * In[k, j - 1]
             In[i - 1, j - 1] = -(s / U[i - 1, i - 1])
 
-# Znalezc macierz X wymiaru nxm spelniajaca rownanie U*X=B
-# X = U^(-1) * B
 
+
+# ypu can generate random B matrix below
+# B = np.random.randint(1, 15, size=(U.shape[0], np.random.randint(1,15)))
+
+# or input your own below
 B = np.array([[1],
               [2],
               [3]
